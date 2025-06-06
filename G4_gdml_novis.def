@@ -2,7 +2,7 @@ Bootstrap: docker
 From: ubuntu:22.04
 
 %labels
-    Author YourName
+    Author A. Tolosa-Delgado, CERN, 2025
     Version Geant4-minimal-gdml
 
 %environment
