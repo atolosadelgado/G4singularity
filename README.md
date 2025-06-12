@@ -1,6 +1,8 @@
 Geant4 singularity image
 =======================
 
+# Singularity
+
 This guide shows how to build a minimal Singularity image with Geant4 (GDML support, no visualization) and use it to compile and run a Geant4-based project.
 
 1. Build image
@@ -42,3 +44,16 @@ singularity exec --bind ./work:/work G4_gdml_novis.sif /work/bin/HGCALTB -m /wor
 
 The `--bind ./work:/work` option mounts your local `work/` directory into the container at `/work`.
 Ensure that all file paths passed to the application reflect their location inside the container.
+
+# Docker
+
+To build the docker image, run:
+
+```
+docker build -t geant4-minimal-gdml .
+```
+
+Once finished, it can be listed like this:
+```
+docker images
+```
